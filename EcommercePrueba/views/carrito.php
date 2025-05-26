@@ -152,7 +152,7 @@
         </div>
     </main>
 
-    <script src="logic/db.js"></script>
-    <script src="logic/carrito.js"></script>
+    <script src="../logic/db.js"></script>
+    <script src="../logic/carrito.js"></script>
 </body>
 </html>

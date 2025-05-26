@@ -106,7 +106,7 @@ function handleLogin(event) {
             localStorage.setItem('userEmail', email);
             showNotification('¡Inicio de sesión exitoso!');
             setTimeout(() => {
-                window.location.href = 'index.html';
+                window.location.href = 'index.php'; // Quita el ../
             }, 1000);
         } else {
             showNotification('Credenciales incorrectas', 'error');

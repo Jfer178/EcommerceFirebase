@@ -58,7 +58,7 @@
         </div>
     </footer>
 
-    <script src="logic/db.js"></script>
-    <script src="logic/catalogo.js"></script>
+    <script src="../logic/db.js"></script>
+    <script src="../logic/catalogo.js"></script>
 </body>
 </html>

@@ -67,6 +67,6 @@
         </div>
     </main>
 
-    <script src="logic/auth.js"></script>
+    <script src="../logic/auth.js"></script>
 </body>
 </html>
