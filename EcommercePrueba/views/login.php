@@ -16,10 +16,10 @@
                 <h1>Mi Tienda de Barrio</h1>
             </div>
             <div class="nav-links">
-                <a href="index.html">Inicio</a>
-                <a href="catalago.html">Catálogo</a>
-                <a href="carrito.html"><i class="fas fa-shopping-cart"></i> Carrito</a>
-                <a href="login.html" class="active"><i class="fas fa-user"></i> Iniciar Sesión</a>
+                <a href="index.php">Inicio</a>
+                <a href="catalogo.php">Catálogo</a>
+                <a href="carrito.php"><i class="fas fa-shopping-cart"></i> Carrito</a>
+                <a href="login.php" class="active"><i class="fas fa-user"></i> Iniciar Sesión</a>
             </div>
         </nav>
     </header>
@@ -30,24 +30,32 @@
             <p>Inicia sesión para continuar</p>
         </div>
 
-        <form id="login-form">
-            <div class="form-group">
-                <label for="email">Correo Electrónico</label>
-                <input type="email" id="email" name="email" required placeholder="tu@email.com">
-            </div>
+        <!-- Conectar el formulario a PHP -->
+<form action="../controllers/UsuarioController.php" method="POST">
+    <div class="form-group">
+        <label for="email">Correo Electrónico</label>
+        <input type="email" id="email" name="email" required placeholder="tu@email.com">
+    </div>
 
-            <div class="form-group">
-                <label for="password">Contraseña</label>
-                <input type="password" id="password" name="password" required placeholder="••••••••">
-            </div>
+    <div class="form-group">
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" name="password" required placeholder="••••••••">
+    </div>
 
-            <button type="submit" class="login-btn">
-                <i class="fas fa-sign-in-alt"></i> Iniciar Sesión
-            </button>
-        </form>
+    <button type="submit" class="login-btn">
+        <i class="fas fa-sign-in-alt"></i> Iniciar Sesión
+    </button>
+</form>
+
+<?php
+if (isset($_GET['error'])) {
+    echo "<p style='color: red;'>❌ {$_GET['error']}</p>";
+}
+?>
+
 
         <div class="login-footer">
-            <p>¿No tienes una cuenta? <a href="#">Regístrate</a></p>
+            <p>¿No tienes una cuenta? <a href="registro.php">Regístrate</a></p>
             <a href="#">¿Olvidaste tu contraseña?</a>
         </div>
 
